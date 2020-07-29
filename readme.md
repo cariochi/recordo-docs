@@ -4,7 +4,8 @@
 # Usage
 1. Add maven dependency
 2. Extend the test class with @ExtendWith(RecordoExtension.class)
-```
+
+```xml
 <dependency>
     <groupId>com.cariochi</groupId>
     <artifactId>recordo</artifactId>
