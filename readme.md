@@ -22,7 +22,7 @@ Annotations: `@Given`.
 
 - If the file is absent, a new random data file will be created.
 
-#### Usage
+#### Example
 
 ```java
     @Test
@@ -43,7 +43,8 @@ Annotations: `@Verify`.
 - If a file is absent, the actual result will be saved as expected.
 - If an assertion fails new "actual" object file will be created.
 
-#### Usage
+#### Example
+
 ```java
     @Test
     void should_get_book_by_id(
@@ -53,23 +54,31 @@ Annotations: `@Verify`.
         expected.assertEquals(actual);
     }
 ```
+
 # Mocking HTTP resources
+
 Record and replay HTTP network interaction for a test.
 
 Annotations: `@MockHttp`.
 
 #### Initialization
+
 - OkHttp
+
 ```java
     @EnableRecordo
     private OkHttpClient client;
 ```
+
 - Apache HttpClient
+
 ```java
     @EnableRecordo
     private HttpClient httpClient;
 ```
-#### Usage
+
+#### Example
+
 ```java
     @Test
     @MockHttp("/mockhttp/should_retrieve_gists.rest.json")
@@ -89,8 +98,9 @@ Annotations: `@Get`, `@Post`, `@Put`, `@Patch`, `@Delete`, `@Headers`, `@Body`.
     @EnableRecordo
     private MockMvc mockMvc;
 ```
-#### Usage
-- GET Request
+
+#### Examples
+
 ```java
     @Test
     void should_get_books(
@@ -101,7 +111,7 @@ Annotations: `@Get`, `@Post`, `@Put`, `@Patch`, `@Delete`, `@Headers`, `@Body`.
         // assertions
     }
 ```
-- GET Response 
+
 ```java
     @Test
     void should_get_books(
@@ -111,7 +121,7 @@ Annotations: `@Get`, `@Post`, `@Put`, `@Patch`, `@Delete`, `@Headers`, `@Body`.
         // assertions
     }
 ```
-- GET Response Body 
+
 ```java
     @Test
     void should_get_books(
@@ -120,7 +130,7 @@ Annotations: `@Get`, `@Post`, `@Put`, `@Patch`, `@Delete`, `@Headers`, `@Body`.
         // assertions
     }
 ```
-- POST Request 
+
 ```java
     @Test
     void should_save_book(
@@ -131,7 +141,7 @@ Annotations: `@Get`, `@Post`, `@Put`, `@Patch`, `@Delete`, `@Headers`, `@Body`.
         // assertions
     }
 ```
-- POST Request 
+
 ```java
     @Test
     void should_save_book(
@@ -142,7 +152,7 @@ Annotations: `@Get`, `@Post`, `@Put`, `@Patch`, `@Delete`, `@Headers`, `@Body`.
         // assertions
     }
 ```
-- POST Response 
+
 ```java
     @Test
     void should_save_book(
@@ -152,7 +162,7 @@ Annotations: `@Get`, `@Post`, `@Put`, `@Patch`, `@Delete`, `@Headers`, `@Body`.
         // assertions
     }
 ```
-- POST Response Body 
+
 ```java
     @Test
     void should_save_book(
