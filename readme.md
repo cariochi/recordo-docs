@@ -14,11 +14,13 @@
 ```
 
 # Data preparation
+
 Load objects from json files. 
 
 Annotations: `@Given`.
 
 - If the file is absent, a new random data file will be created.
+
 #### Usage
 
 ```java
@@ -32,6 +34,7 @@ Annotations: `@Given`.
 ```
 
 # Assertions 
+
 Assert that actual value equals to expected.
 
 Annotations: `@Verify`. 
