@@ -1,7 +1,7 @@
 # Table of contents
 
 * [What is Recordo](README.md)
-* [Quick start](quick-start.md)
+* [Quick Start](quick-start.md)
 * [Load Resources](load-resources.md)
 * [Assertions](assertions.md)
 * [Record and Playback REST Requests](record-and-playback-rest-requests.md)

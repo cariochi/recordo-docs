@@ -1,4 +1,4 @@
-# Quick start
+# Quick Start
 
 ## Maven dependency
 
