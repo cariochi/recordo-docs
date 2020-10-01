@@ -1,6 +1,14 @@
 # Record and Playback REST Requests
 
-Record and replay HTTP network interaction for a test.
+Record and playback all third-party REST requests.
+
+{% hint style="info" %}
+If a json file is absent, **Recordo** will record all requests and responses.
+{% endhint %}
+
+{% hint style="info" %}
+If a json file is present, **Recordo** will mock REST servers and playback all recorded requests and responses. 
+{% endhint %}
 
 ## Initialization
 

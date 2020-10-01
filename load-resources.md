@@ -1,5 +1,11 @@
 # Load Resources
 
+**Recordo** automatically loads resources from json files and provides them as test input parameters.
+
+{% hint style="info" %}
+If a json file is absent, a new file with an empty object will be created.
+{% endhint %}
+
 ## Examples
 
 ```java

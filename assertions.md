@@ -1,9 +1,15 @@
 # Assertions
 
-Assert that actual value is equal to expected.
+**Recordo** verifies that actual value is equal to expected using json assertion.   
+The expected value is loaded from a file.
 
-* If a file is absent, the actual result will be saved as expected.
-* If an assertion fails new "actual" object file will be created.
+{% hint style="info" %}
+If a file is absent, the actual result will be saved as expected.
+{% endhint %}
+
+{% hint style="info" %}
+If an assertion fails, the actual object will be saved to a new file for comparison.
+{% endhint %}
 
 ## Examples
 
