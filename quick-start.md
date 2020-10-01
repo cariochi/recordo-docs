@@ -1,6 +1,6 @@
 # Quick Start
 
-## Import maven dependency
+### Import maven dependency
 
 ```markup
 <dependency>
@@ -11,7 +11,7 @@
 </dependency>
 ```
 
-## Extend a test with Recordo extension
+### Extend a test with Recordo extension
 
 ```java
 @ExtendWith(RecordoExtension.class)
@@ -20,7 +20,7 @@ class BookServiceTest {
 }
 ```
 
-## Enable ObjectMapper to be used by Recordo \(Optional\)
+### Enable ObjectMapper to be used by Recordo \(Optional\)
 
 If you want your Jackson **ObjectMapper** to be used for json serialization/deserialization for all **Recordo** extension features, you can enable it by the **`@EnableRecordo`**annotation.   
 Otherwise, the default **ObjectMapper** will be used.
