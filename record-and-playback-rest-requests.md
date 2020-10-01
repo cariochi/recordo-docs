@@ -32,5 +32,3 @@ void should_retrieve_gists() {
 }
 ```
 
-## 
-

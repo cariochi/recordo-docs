@@ -44,5 +44,3 @@ void should_get_all_books(
 }
 ```
 
-## 
-

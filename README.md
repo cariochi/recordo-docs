@@ -1,12 +1,12 @@
 # What is Recordo
 
-{% hint style="info" %}
+{% hint style="warning" %}
 This documentation is still under development, so you can find some missing sections.
 {% endhint %}
 
 **Recordo** is a JUnit 5 extension for fast, deterministic, and accurate tests. It implements common test functionality in a declarative way and helps to handle json resources by recording or generating json files if they are absent.
 
-### Load Resources 
+### Load Resources
 
 ```java
 @Test
@@ -41,7 +41,7 @@ void should_retrieve_gists() {
 }
 ```
 
-### Test a Web Layer  
+### Test a Web Layer
 
 ```java
 @Test
@@ -51,3 +51,4 @@ void should_get_books(
    ...
 }
 ```
+
