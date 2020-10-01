@@ -1,6 +1,6 @@
 # Quick Start
 
-### Maven dependency
+## Maven dependency
 
 ```markup
 <dependency>
@@ -11,7 +11,7 @@
 </dependency>
 ```
 
-### Initialization
+## Initialization
 
 ```java
 @ExtendWith(RecordoExtension.class)
@@ -20,7 +20,7 @@ class BookServiceTest {
 }
 ```
 
-### Enable ObjectMapper to be used by Recordo \(Optional\)
+## Enable ObjectMapper to be used by Recordo \(Optional\)
 
 ```java
 @EnableRecordo

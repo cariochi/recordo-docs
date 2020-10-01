@@ -2,7 +2,7 @@
 
 Record and replay HTTP network interaction for a test.
 
-### Initialization
+## Initialization
 
 {% tabs %}
 {% tab title="OkHttp" %}
@@ -20,7 +20,7 @@ private HttpClient httpClient;
 {% endtab %}
 {% endtabs %}
 
-### Examples
+## Examples
 
 ```java
 @Test

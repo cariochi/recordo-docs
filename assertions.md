@@ -5,7 +5,7 @@ Assert that actual value is equal to expected.
 * If a file is absent, the actual result will be saved as expected.
 * If an assertion fails new "actual" object file will be created.
 
-### Examples
+## Examples
 
 ```java
 @Test
