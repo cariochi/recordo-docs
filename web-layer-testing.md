@@ -2,14 +2,15 @@
 
 Use Spring MockMvc in a declarative way.
 
-### Initialization
+## Initialization
 
 ```java
 @EnableRecordo
+@Autowired
 private MockMvc mockMvc;
 ```
 
-### Examples
+## Examples
 
 ```java
 @Test
