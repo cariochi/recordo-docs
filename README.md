@@ -154,7 +154,6 @@ void should_retrieve_gists() {
     }
   }
 ]
-
 ```
 {% endtab %}
 {% endtabs %}
