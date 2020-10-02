@@ -82,7 +82,7 @@ void should_retrieve_gists() {
 ```
 {% endtab %}
 
-{% tab title="Recorded get\_gists.rest.json" %}
+{% tab title="get\_gists.rest.json \(recorded\)" %}
 ```javascript
 [
   {
