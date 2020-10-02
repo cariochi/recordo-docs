@@ -269,38 +269,7 @@ void should_create_and_delete_gist() {
           "site_admin": false
         },
         "forks": [],
-        "history": [
-          {
-            "user": {
-              "login": "vadimdeineka",
-              "id": 9740075,
-              "node_id": "MDQ6VXNlcjk3NDAwNzU=",
-              "avatar_url": "https://avatars3.githubusercontent.com/u/9740075?v=4",
-              "gravatar_id": "",
-              "url": "https://api.github.com/users/vadimdeineka",
-              "html_url": "https://github.com/vadimdeineka",
-              "followers_url": "https://api.github.com/users/vadimdeineka/followers",
-              "following_url": "https://api.github.com/users/vadimdeineka/following{/other_user}",
-              "gists_url": "https://api.github.com/users/vadimdeineka/gists{/gist_id}",
-              "starred_url": "https://api.github.com/users/vadimdeineka/starred{/owner}{/repo}",
-              "subscriptions_url": "https://api.github.com/users/vadimdeineka/subscriptions",
-              "organizations_url": "https://api.github.com/users/vadimdeineka/orgs",
-              "repos_url": "https://api.github.com/users/vadimdeineka/repos",
-              "events_url": "https://api.github.com/users/vadimdeineka/events{/privacy}",
-              "received_events_url": "https://api.github.com/users/vadimdeineka/received_events",
-              "type": "User",
-              "site_admin": false
-            },
-            "version": "e4acb84c93d85b2fc0f4e34770e7fd07e55f3262",
-            "committed_at": "2020-07-06T08:34:55Z",
-            "change_status": {
-              "total": 3,
-              "additions": 3,
-              "deletions": 0
-            },
-            "url": "https://api.github.com/gists/4c16188cd8b6bc2de6ea2eec953ed7ca/e4acb84c93d85b2fc0f4e34770e7fd07e55f3262"
-          }
-        ],
+        "history": [],
         "truncated": false
       }
     }
