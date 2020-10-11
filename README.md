@@ -12,12 +12,12 @@ The main concept of the **Recordo** extension is that test will generate or reco
 
 The most common test creation scenario is:
 
-1. You create a test and run it the first time.
+1. You create a test and run it for the first time.
 2. **Recordo** extension creates json files. Test fails.
-3. You verify and modify json files if it's needed.
-4. You run a test the second time. Test passes.
+3. You verify and modify json files if necessary.
+4. You run a test for the second time. Test passes.
 
-In case you have several test parameters provided by the **Recordo** extension, you may need several test-preparation runs.
+In case you have several test parameters provided by the **Recordo** extension, you might need several test-preparation runs.
 
 ## Features
 
