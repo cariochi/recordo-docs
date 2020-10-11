@@ -22,6 +22,8 @@ If an assertion fails, the actual object will be saved to a new file for compari
 
 ## Examples
 
+{% tabs %}
+{% tab title="Java" %}
 ```java
 @Test
 void should_get_book_by_id() {
@@ -31,7 +33,25 @@ void should_get_book_by_id() {
             .isEqualTo("/books/book.json");
 }
 ```
+{% endtab %}
 
+{% tab title="book.json" %}
+```javascript
+{
+  "id": 1,
+  "title": "Othello",
+  "author": {
+    "id": 1,
+    "firstName": "William",
+    "lastName": "Shakespeare"
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Java" %}
 ```java
 @Test
 void should_get_books_by_author(
@@ -46,16 +66,92 @@ void should_get_books_by_author(
             .isEqualTo("/books/short_books.json");
 }
 ```
+{% endtab %}
 
+{% tab title="author.json" %}
+```javascript
+{
+  "id": 1,
+  "firstName": "William",
+  "lastName": "Shakespeare"
+}
+```
+{% endtab %}
+
+{% tab title="short\_books.json" %}
+```javascript
+{
+  "content": [
+    {
+      "id": 1,
+      "title": "Othello",
+      "author": {
+        "id": 1
+      }
+    },
+    {
+      "id": 2,
+      "title": "Macbeth",
+      "author": {
+        "id": 1
+      }
+    },
+    {
+      "id": 3,
+      "title": "Richard II",
+      "author": {
+        "id": 1
+      }
+    }
+  ]
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Java" %}
 ```java
 @Test
 void should_get_all_books() {
     List<Book> actual = bookService.findAll();
     
     RecordoAssertion.assertAsJson(actual)
-            .excluded("description", "author.comments")
+            .excluded("author.firstName", "author.lastName")
             .withStrictOrder(false)
-            .isEqualTo("/books/all_books.json");
+            .isEqualTo("/books/short_books.json");
 }
 ```
+{% endtab %}
+
+{% tab title="short\_books.json" %}
+```javascript
+{
+  "content": [
+    {
+      "id": 1,
+      "title": "Othello",
+      "author": {
+        "id": 1
+      }
+    },
+    {
+      "id": 2,
+      "title": "Macbeth",
+      "author": {
+        "id": 1
+      }
+    },
+    {
+      "id": 3,
+      "title": "Richard II",
+      "author": {
+        "id": 1
+      }
+    }
+  ]
+}
+```
+{% endtab %}
+{% endtabs %}
 
