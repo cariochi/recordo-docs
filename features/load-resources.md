@@ -8,7 +8,7 @@ If a json file is absent, a new file with an empty object will be created.
 
 ## Custom ObjectMapper \(optional\)
 
-To use your custom Jackson **`ObjectMapper`** instance for json deserialization instead of the default one, you should enable it by adding the **`@EnableRecordo`**annotation to the field. 
+To use your custom Jackson **`ObjectMapper`** for json deserialization instead of the default one, you should enable it by adding the **`@EnableRecordo`**annotation to the field. 
 
 ```java
 @EnableRecordo

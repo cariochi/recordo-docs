@@ -1,10 +1,10 @@
 # Assertions
 
-**RecordoAssertion** verifies that the actual value is equal to the expected one using [JsonAssert](https://github.com/skyscreamer/JSONassert). The expected value is loaded from a file.
+**`RecordoAssertion`** verifies that the actual value is equal to the expected one using [JsonAssert](https://github.com/skyscreamer/JSONassert). The expected value is loaded from a file.
 
 {% hint style="info" %}
-* If a file is absent, the actual result will be saved as expected.
-* If an assertion fails, the actual object will be saved to a new file for comparison.
+* If a file is absent, the actual value will be saved as expected.
+* If an assertion fails, the actual value will be saved to a new file for comparison.
 {% endhint %}
 
 ## Assertion Parameters

@@ -17,7 +17,7 @@ The most common test creation scenario is:
 3. You verify and modify json files if necessary.
 4. You run a test for the second time. Test passes.
 
-In case you have several test parameters provided by the **Recordo** extension, you might need several test-preparation runs.
+In case you have several test parameters provided by the **Recordo** extension, you may need several test-preparation runs.
 
 ## Features
 
