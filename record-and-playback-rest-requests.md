@@ -2,17 +2,15 @@
 
 Record and playback all third-party REST requests.
 
-{% hint style="success" %}
+{% hint style="info" %}
 If a json file is absent, **Recordo** extension will record all requests and responses.
 {% endhint %}
 
-{% hint style="success" %}
+{% hint style="info" %}
 If a json file is present, **Recordo** extension will mock REST servers and playback all recorded requests and responses. 
 {% endhint %}
 
 ## Initialization
-
-### Add HTTP Interceptor
 
 To record and replay REST requests and responses **Recordo** extension should add an interceptor to your HTTP client.   
 Currently, two HTTP clients are supported:
@@ -20,7 +18,7 @@ Currently, two HTTP clients are supported:
 * OkHttp Client
 * Apache Http Client
 
- To enable **Recordo** extension for an HTTP client you just need to add **`@EnableRecordo`** annotation. 
+ To enable **Recordo** for an HTTP client you just need to add **`@EnableRecordo`** annotation. 
 
 {% tabs %}
 {% tab title="OkHttp" %}
@@ -39,16 +37,6 @@ private HttpClient httpClient;
 ```
 {% endtab %}
 {% endtabs %}
-
-### Custom ObjectMapper \(optional\)
-
-To use your custom Jackson **`ObjectMapper`** instance, you should enable it by adding the **`@EnableRecordo`**annotation. 
-
-```java
-@EnableRecordo
-@Autowired
-private ObjectMapper objectMapper;
-```
 
 ### RestTemplate definition example
 
@@ -104,7 +92,7 @@ public feign.Client feignClient(HttpClient httpClient) {
 {% tab title="Java" %}
 ```java
 @Test
-@WithMockHttpServer("/mockServer/get_gists.rest.json")
+@MockHttpServer("/mockServer/get_gists.rest.json")
 void should_retrieve_gists() {
     ...
     List<GistResponse> gists = gitHubClient.getGists();
@@ -193,7 +181,7 @@ void should_retrieve_gists() {
 {% tab title="Java" %}
 ```java
 @Test
-@WithMockHttpServer("/mockhttp/create_and_delete_gist.rest.json")
+@MockHttpServer("/mockhttp/create_and_delete_gist.rest.json")
 void should_create_and_delete_gist() {
     ...
     GistResponse response = gitHubClient.createGist(gist);

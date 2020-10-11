@@ -8,7 +8,16 @@ This documentation is still under development, so you can find some missing sect
 
 ## Concept
 
+The main concept of the **Recordo** exception is that test will generate or record resources at first run. 
 
+The most common test creation scenario is:
+
+1. You create a test and run it the first time.
+2. **Recordo** extension creates json files. Test fails.
+3. You verify and modify json files if it's needed.
+4. You run a test the second time. Test passes.
+
+In case you have several test parameters provided by the **Recordo** extension, you may need several test-preparation runs.
 
 ## Features
 
