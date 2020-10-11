@@ -2,11 +2,11 @@
 
 Record and playback all third-party REST requests.
 
-{% hint style="info" %}
+{% hint style="success" %}
 If a json file is absent, **Recordo** extension will record all requests and responses.
 {% endhint %}
 
-{% hint style="info" %}
+{% hint style="success" %}
 If a json file is present, **Recordo** extension will mock REST servers and playback all recorded requests and responses. 
 {% endhint %}
 

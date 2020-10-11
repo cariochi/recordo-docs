@@ -2,7 +2,7 @@
 
 **Recordo** extension provides `Assertion` objects as test input parameters. Assertion verifies that the actual value is equal to the expected one using json assertion. The expected value is loaded from a file.
 
-{% hint style="info" %}
+{% hint style="success" %}
 If a file is absent, the actual result will be saved as expected.
 {% endhint %}
 
