@@ -92,7 +92,7 @@ public feign.Client feignClient(HttpClient httpClient) {
 {% tab title="Java" %}
 ```java
 @Test
-@MockHttpServer("/mockServer/get_gists.rest.json")
+@WithMockHttpServer("/mockServer/get_gists.rest.json")
 void should_retrieve_gists() {
     ...
     List<GistResponse> gists = gitHubClient.getGists();
@@ -181,7 +181,7 @@ void should_retrieve_gists() {
 {% tab title="Java" %}
 ```java
 @Test
-@MockHttpServer("/mockhttp/create_and_delete_gist.rest.json")
+@WithMockHttpServer("/mockhttp/create_and_delete_gist.rest.json")
 void should_create_and_delete_gist() {
     ...
     GistResponse response = gitHubClient.createGist(gist);

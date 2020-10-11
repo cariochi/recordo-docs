@@ -1,48 +1,49 @@
 # Assertions
 
-Assert that actual value is equal to expected.
+**Recordo** extension provides `Assertion` objects as test input parameters. Assertion verifies that the actual value is equal to the expected one using json assertion. The expected value is loaded from a file.
 
-* If a file is absent, the actual result will be saved as expected.
-* If an assertion fails new "actual" object file will be created.
+{% hint style="info" %}
+If a file is absent, the actual result will be saved as expected.
+{% endhint %}
 
-### Examples
+{% hint style="info" %}
+If an assertion fails, the actual object will be saved to a new file for comparison.
+{% endhint %}
+
+## Examples
 
 ```java
 @Test
-void should_get_book_by_id(
-        @Given("/books/book.json") Assertion<Book> assertion
-) {
-    final Book actual = bookService.findById(1L);
-    assertion.assertAsExpected(actual);
+void should_get_book_by_id() {
+    Book actual = ...
+    RecordoAssertion.assertAsJson(actual)
+            .isEqualTo("/books/book.json");
 }
 ```
 
 ```java
 @Test
 void should_get_books_by_author(
-        @Given("/books/author.json") Author author,
-        @Given("/books/short_books.json") Assertion<Page<Book>> assertion
+        @Read("/books/author.json") Author author
 ) {
     Page<Book> actual = bookService.findAllByAuthor(author);
-    assertion
-            .included("content.id", "content.title", "content.author.id")
+    
+    RecordoAssertion.assertAsJson(actual)
             .extensible(true)
-            .assertAsExpected(aclual);
+            .including("content.id", "content.title", "content.author.id")
+            .isEqualTo("/books/short_books.json");
 }
 ```
 
 ```java
 @Test
-void should_get_all_books(
-        @Given("/books/all_books.json") Assertion<List<Book>> assertion
-) {
+void should_get_all_books() {
     List<Book> actual = bookService.findAll();
-    assertion
+    
+    RecordoAssertion.assertAsJson(actual)
             .excluded("description", "author.comments")
-            .strictOrder(false)
-            .assertAsExpected(actual);
+            .withStrictOrder(false)
+            .isEqualTo("/books/all_books.json");
 }
 ```
-
-## 
 
