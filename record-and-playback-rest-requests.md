@@ -12,13 +12,15 @@ If a json file is present, **Recordo** extension will mock REST servers and play
 
 ## Initialization
 
+### Add HTTP Interceptor
+
 To record and replay REST requests and responses **Recordo** extension should add an interceptor to your HTTP client.   
 Currently, two HTTP clients are supported:
 
 * OkHttp Client
 * Apache Http Client
 
- To enable **Recordo** for an HTTP client you just need to add **`@EnableRecordo`** annotation. 
+ To enable **Recordo** extension for an HTTP client you just need to add **`@EnableRecordo`** annotation. 
 
 {% tabs %}
 {% tab title="OkHttp" %}
@@ -37,6 +39,16 @@ private HttpClient httpClient;
 ```
 {% endtab %}
 {% endtabs %}
+
+### Custom ObjectMapper \(optional\)
+
+To use your custom Jackson **`ObjectMapper`** instance, you should enable it by adding the **`@EnableRecordo`**annotation. 
+
+```java
+@EnableRecordo
+@Autowired
+private ObjectMapper objectMapper;
+```
 
 ### RestTemplate definition example
 

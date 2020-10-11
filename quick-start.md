@@ -20,14 +20,3 @@ class BookServiceTest {
 }
 ```
 
-### Enable ObjectMapper to be used by Recordo \(optional\)
-
-If you want your Jackson **ObjectMapper** to be used for json serialization/deserialization for all **Recordo** extension features, you can enable it by the **`@EnableRecordo`**annotation.   
-Otherwise, the default **ObjectMapper** will be used.
-
-```java
-@EnableRecordo
-@Autowired
-private ObjectMapper objectMapper;
-```
-
