@@ -2,11 +2,11 @@
 
 Record and playback all third-party REST requests.
 
-{% hint style="success" %}
+{% hint style="info" %}
 If a json file is absent, **Recordo** extension will record all requests and responses.
 {% endhint %}
 
-{% hint style="success" %}
+{% hint style="info" %}
 If a json file is present, **Recordo** extension will mock REST servers and playback all recorded requests and responses. 
 {% endhint %}
 
@@ -92,7 +92,7 @@ public feign.Client feignClient(HttpClient httpClient) {
 {% tab title="Java" %}
 ```java
 @Test
-@WithMockHttpServer("/mockServer/get_gists.rest.json")
+@MockHttpServer("/mockServer/get_gists.rest.json")
 void should_retrieve_gists() {
     ...
     List<GistResponse> gists = gitHubClient.getGists();
@@ -181,7 +181,7 @@ void should_retrieve_gists() {
 {% tab title="Java" %}
 ```java
 @Test
-@WithMockHttpServer("/mockhttp/create_and_delete_gist.rest.json")
+@MockHttpServer("/mockhttp/create_and_delete_gist.rest.json")
 void should_create_and_delete_gist() {
     ...
     GistResponse response = gitHubClient.createGist(gist);
