@@ -8,7 +8,7 @@ This documentation is still under development, so you can find some missing sect
 
 ## Concept
 
-The main concept of the **Recordo** exception is that test will generate or record resources at first run. 
+The main concept of the **Recordo** extension is that test will generate or record resources at first run. 
 
 The most common test creation scenario is:
 
