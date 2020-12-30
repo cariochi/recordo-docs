@@ -218,7 +218,7 @@ void should_get_books(
 
 ## Concept
 
-The main concept of the **Recordo** extension is that test will generate or record resources at the first run. 
+The main concept of the **Recordo** extension is that the test will generate or record json resources if they are absent. 
 
 The most common test creation scenario is:
 
