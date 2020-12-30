@@ -1,4 +1,4 @@
-# Web Layer Testing
+# Mock Client
 
 **Recordo** extension allows testing a web layer in a declarative way. You need just declare a test parameter with a specific annotation and Recodro will prepare a request or even execute it and will provide a response as a parameter.
 

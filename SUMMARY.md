@@ -5,10 +5,10 @@
 
 ## Features
 
-* [Load Resources](features/load-resources.md)
-* [Assertions](features/assertions.md)
-* [Record and Playback REST Requests](features/record-and-playback-rest-requests.md)
-* [Web Layer Testing](features/web-layer-testing.md)
+* [Read Objects From Json Files](features/load-resources.md)
+* [Json Assertions](features/assertions.md)
+* [Record and Playback Mock Server](features/record-and-playback-rest-requests.md)
+* [Mock Client](features/web-layer-testing.md)
 
 ---
 

@@ -1,4 +1,4 @@
-# Load Resources
+# Read Objects From Json Files
 
 **Recordo** extension automatically loads resources from json files and provides them as test input parameters.
 

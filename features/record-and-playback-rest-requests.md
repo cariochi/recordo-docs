@@ -1,4 +1,4 @@
-# Record and Playback REST Requests
+# Record and Playback Mock Server
 
 Record and playback all third-party REST requests.
 

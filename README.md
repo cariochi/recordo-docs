@@ -8,7 +8,7 @@ This documentation is still under development, so you can find some missing sect
 
 ## Concept
 
-The main concept of the **Recordo** extension is that test will generate or record resources at first run. 
+The main concept of the **Recordo** extension is that test will generate or record resources at the first run. 
 
 The most common test creation scenario is:
 
@@ -21,7 +21,9 @@ In case you have several test parameters provided by the **Recordo** extension, 
 
 ## Features
 
-### Load Resources
+### [Read Objects From Json Files](features/load-resources.md)
+
+Allows deserializing objects from resources. If a json file is absent, it will be created automatically.
 
 {% tabs %}
 {% tab title="Test" %}
@@ -50,7 +52,9 @@ void should_create_book(
 {% endtab %}
 {% endtabs %}
 
-### Make Assertions
+### [Json Assertions](features/assertions.md)
+
+Allows making Json Assertions. If a json file is absent, the actual value will be saved to file for future assertions.
 
 {% tabs %}
 {% tab title="Java" %}
@@ -60,6 +64,7 @@ void should_get_book_by_id() {
     Book actual = ...
     
     RecordoAsserion.assertAsJson(actual)
+            .excluding("author.firstName", "author.lastName")
             .isEqualTo("/books/book.json");
 }
 ```
@@ -80,7 +85,9 @@ void should_get_book_by_id() {
 {% endtab %}
 {% endtabs %}
 
-### Record and Playback  REST Requests
+### [Record and Playback Mock Server](features/record-and-playback-rest-requests.md)
+
+Simulates HTTP-based APIs. If a json file is absent, all requests will be executed with real servers and all requests and responses will be saved.
 
 {% tabs %}
 {% tab title="Java" %}
@@ -171,7 +178,9 @@ void should_retrieve_gists() {
 {% endtab %}
 {% endtabs %}
 
-### Test a Web Layer
+### [Mock Client](features/web-layer-testing.md)
+
+A convenient way to test your own end-points. It wraps **Spring MockMvc** and deserializes responses.
 
 ```java
 @Test

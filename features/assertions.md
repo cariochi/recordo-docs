@@ -1,4 +1,4 @@
-# Assertions
+# Json Assertions
 
 **`RecordoAssertion`** verifies that the actual value is equal to the expected one using [JsonAssert](https://github.com/skyscreamer/JSONassert). The expected value is loaded from a file.
 
