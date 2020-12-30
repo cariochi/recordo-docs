@@ -11,11 +11,11 @@
 
 |  |  |
 | :--- | :--- |
-| **using**\(ObjectMapper mapper\) | Specifies an **ObjectMapper** instance that will be used instead of the default one. |
-| **extensible**\(boolean value\) | Allows keys in actual that don't appear in expected. Default value is `false`. |
-| **withStrictOrder**\(boolean value\) | Requires strict ordering of array elements. Default value is `true`. |
-| **including**\(String... fields\) | Defines fields that should be used in the comparison. All other fields will be ignored. Allows nested fields. |
-| **excluding**\(String... fields\) | Defines fields that should be excluded from the comparison. Allows nested fields. |
+| **using** | Specifies an **ObjectMapper** instance that will be used instead of the default one. |
+| **extensible** | Allows keys in actual that don't appear in expected. Default value is `false`. |
+| **withStrictOrder** | Requires strict ordering of array elements. Default value is `true`. |
+| **including** | Defines fields that should be used in the comparison. All other fields will be ignored. Allows nested fields. |
+| **excluding** | Defines fields that should be excluded from the comparison. Allows nested fields. |
 
 ## Examples
 
