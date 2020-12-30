@@ -6,19 +6,6 @@ This documentation is still under development, so you can find some missing sect
 
 **Recordo** is a JUnit 5 extension for fast, deterministic, and accurate tests. It implements common test functionality in a declarative way and helps to handle json resources by recording or generating json files if they are absent.
 
-## Concept
-
-The main concept of the **Recordo** extension is that test will generate or record resources at the first run. 
-
-The most common test creation scenario is:
-
-1. You create a test and run it for the first time.
-2. **Recordo** extension creates json files. Test fails.
-3. You verify and modify json files if necessary.
-4. You run a test for the second time. Test passes.
-
-In case you have several test parameters provided by the **Recordo** extension, you may need several test-preparation runs.
-
 ## Features
 
 ### [Read Objects From Json Files](features/load-resources.md)
@@ -190,6 +177,19 @@ void should_get_books(
    ...
 }
 ```
+
+## Concept
+
+The main concept of the **Recordo** extension is that test will generate or record resources at the first run. 
+
+The most common test creation scenario is:
+
+1. You create a test and run it for the first time.
+2. **Recordo** extension creates json files. Test fails.
+3. You verify and modify json files if necessary.
+4. You run a test for the second time. Test passes.
+
+In case you have several test parameters provided by the **Recordo** extension, you may need several test-preparation runs.
 
 ## License
 
