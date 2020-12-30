@@ -38,20 +38,13 @@ private ObjectMapper objectMapper;
 ## Examples
 
 {% tabs %}
-{% tab title="GET Request" %}
+{% tab title="GET Response Content" %}
 ```java
 @Test
 void should_get_books(
-        @MockHttpGet("/users/{userId}/books") Request<Page<Book>> request
+        @MockHttpGet(value = "/users/1/books?page=2", headers = "Authorization=...") 
+           Page<Book> books
 ) {
-   ...
-   Response<Page<UserDto>> response = request
-                .uriVars(1)
-                .param("page", "2")
-                .header("Authorization", "...")
-                .execute();
-                
-   Page<Book> books = responce.getContent();
    ...
 }
 ```
@@ -73,13 +66,20 @@ void should_get_books(
 ```
 {% endtab %}
 
-{% tab title="GET Response Content" %}
+{% tab title="GET Request" %}
 ```java
 @Test
 void should_get_books(
-        @MockHttpGet(value = "/users/1/books?page=2", headers = "Authorization=...") 
-           Page<Book> books
+        @MockHttpGet("/users/{userId}/books") Request<Page<Book>> request
 ) {
+   ...
+   Response<Page<UserDto>> response = request
+                .uriVars(1)
+                .param("page", "2")
+                .header("Authorization", "...")
+                .execute();
+                
+   Page<Book> books = responce.getContent();
    ...
 }
 ```
@@ -87,16 +87,12 @@ void should_get_books(
 {% endtabs %}
 
 {% tabs %}
-{% tab title="POST Request" %}
+{% tab title="POST Response Content" %}
 ```java
 @Test
 void should_create_book(
-        @MockHttpPost("/books") Request<Book> request
+        @MockHttpPost(value = "/books", body = "/new_book.json") Book createdBook
 ) {
-    ...
-    Book book = ...
-    Response<Book> response = request.body(book).execute();
-    Book createdBook = response.getContent();
     ...
 }
 ```
@@ -116,12 +112,16 @@ void should_create_book(
 ```
 {% endtab %}
 
-{% tab title="POST Response Content" %}
+{% tab title="POST Request" %}
 ```java
 @Test
 void should_create_book(
-        @MockHttpPost(value = "/books", body = "/new_book.json") Book createdBook
+        @MockHttpPost("/books") Request<Book> request
 ) {
+    ...
+    Book book = ...
+    Response<Book> response = request.body(book).execute();
+    Book createdBook = response.getContent();
     ...
 }
 ```
@@ -129,16 +129,13 @@ void should_create_book(
 {% endtabs %}
 
 {% tabs %}
-{% tab title="PUT Request" %}
+{% tab title="PUT Response Content" %}
 ```java
 @Test
-void should_update_book(
-        @MockHttpPut("/books/{id}") Request<Book> request
+void should_create_book(
+        @MockHttpPut(value = "/books", body = "/updated_book.json") 
+                Book updatedBook
 ) {
-    ...
-    Book book = ...
-    Response<Book> response = request.uriVars(1).body(book).execute();
-    Book updatedBook = response.getContent();
     ...
 }
 ```
@@ -157,13 +154,16 @@ void should_create_book(
 ```
 {% endtab %}
 
-{% tab title="PUT Response Content" %}
+{% tab title="PUT Request" %}
 ```java
 @Test
-void should_create_book(
-        @MockHttpPut(value = "/books", body = "/updated_book.json") 
-                Book updatedBook
+void should_update_book(
+        @MockHttpPut("/books/{id}") Request<Book> request
 ) {
+    ...
+    Book book = ...
+    Response<Book> response = request.uriVars(1).body(book).execute();
+    Book updatedBook = response.getContent();
     ...
 }
 ```
@@ -171,6 +171,18 @@ void should_create_book(
 {% endtabs %}
 
 {% tabs %}
+{% tab title="DELETE Response" %}
+```java
+@Test
+void should_delete_book(
+        @MockHttpDelete(value = "/books/{id}", expectedStatus = HttpStatus.NO_CONTENT) 
+            Response<Void> response
+) {
+    ...
+}
+```
+{% endtab %}
+
 {% tab title="DELETE Request" %}
 ```java
 @Test
@@ -182,18 +194,6 @@ void should_delete_book(
         .uriVars(1)
         .expectedStatus(HttpStatus.NO_CONTENT)
         .execute();
-    ...
-}
-```
-{% endtab %}
-
-{% tab title="DELETE Response" %}
-```java
-@Test
-void should_delete_book(
-        @MockHttpDelete(value = "/books/{id}", expectedStatus = HttpStatus.NO_CONTENT) 
-            Response<Void> response
-) {
     ...
 }
 ```

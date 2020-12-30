@@ -169,6 +169,8 @@ void should_retrieve_gists() {
 
 A convenient way to test your own end-points. It wraps **Spring MockMvc** and deserializes responses.
 
+{% tabs %}
+{% tab title="Execute and get response content" %}
 ```java
 @Test
 void should_get_books(
@@ -177,6 +179,42 @@ void should_get_books(
    ...
 }
 ```
+{% endtab %}
+
+{% tab title="Execute and get response" %}
+```java
+@Test
+void should_get_books(
+        @MockHttpGet("/users/1/books?page=2") Response<Page<Book>> response
+) {
+   ...
+   Page<Book> books = responce.getContent();
+   HttpStatus status = response.getStatus()
+   Map<String, String> headers = response.getHeaders()
+   ...
+}
+```
+{% endtab %}
+
+{% tab title="Prepare request" %}
+```java
+@Test
+void should_get_books(
+        @MockHttpGet("/users/{userId}/books") Request<Page<Book>> request
+) {
+   ...
+   Response<Page<UserDto>> response = request
+                .uriVars(1)
+                .param("page", "2")
+                .header("Authorization", "...")
+                .execute();
+                
+   Page<Book> books = responce.getContent();
+   ...
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ## Concept
 
