@@ -114,7 +114,7 @@ void should_get_all_books() {
     List<Book> actual = bookService.findAll();
     
     RecordoAssertion.assertAsJson(actual)
-            .excluded("author.firstName", "author.lastName")
+            .excluding("author.firstName", "author.lastName")
             .withStrictOrder(false)
             .isEqualTo("/books/short_books.json");
 }
