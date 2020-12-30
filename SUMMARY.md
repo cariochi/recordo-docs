@@ -10,7 +10,11 @@
 * [Record and Playback Mock Server](features/record-and-playback-rest-requests.md)
 * [Mock Client](features/web-layer-testing.md)
 
----
+## Links
 
 * [GitHub](https://github.com/cariochi/recordo)
+
+## Contacts
+
+* [vadym@deineka.com](mailto:vadym@deineka.com)
 
